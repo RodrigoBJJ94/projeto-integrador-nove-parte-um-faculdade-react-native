@@ -13,7 +13,7 @@ export default function App() {
       <NavigationContainer>
         <Tab.Navigator initialRouteName="Projetos">
           <Tab.Screen name="Projetos" component={Projetos} />
-          <Tab.Screen name="Requerimentos" component={Requisitos} />
+          <Tab.Screen name="Requisitos" component={Requisitos} />
         </Tab.Navigator>
       </NavigationContainer>
     </View>

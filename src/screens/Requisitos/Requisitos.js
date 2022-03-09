@@ -1,55 +1,124 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet } from "react-native";
 import DateTimePicker from "react-native-modal-datetime-picker";
 
 export default function Requisitos() {
     const [projectName, setProjectName] = useState("");
-    const [startDate, setStartDate] = useState(false);
-    const [endDate, setEndDate] = useState(false);
+    const [registerDate, setRegisterDate] = useState(false);
 
     function showDate() {
-        setStartDate(true);
-        setEndDate(true);
+        setRegisterDate(true);
     };
 
     function hideDate() {
-        setStartDate(false);
-        setEndDate(false);
+        setRegisterDate(false);
     };
 
-    function confirmDate(date) {
-        Alert.alert(date.toString());
+    function confirmDate() {
         showDate();
     };
 
     return (
-        <View>
-            <View>
-                <Text>Requisitos</Text>
+        <View style={Styles.mainView}>
+            <View style={Styles.viewCaption}>
+                <Text style={Styles.caption}>Preencha os Requisitos</Text>
             </View>
-            <View>
-                <Text>Descrição do Requisito</Text>
+            <View style={Styles.viewName}>
+                <Text style={Styles.name}>Descrição do Requisito</Text>
                 <TextInput onChangeText={text => setProjectName(text)}
-                    style={{ backgroundColor: "orange", color: "white" }} />
+                    style={Styles.input} />
+                <Text style={Styles.name}>Importância do Requisito (1 a 5)</Text>
+                <TextInput onChangeText={text => setProjectName(text)}
+                    style={Styles.input} />
+                <Text style={Styles.name}>Nível de Dificuldade da Implementação do Requisito (1 a 5)</Text>
+                <TextInput onChangeText={text => setProjectName(text)}
+                    style={Styles.input} />
+                <Text style={Styles.name}>Tempo estimado da Contrução/Entrega do Requisito (horas)</Text>
+                <TextInput onChangeText={text => setProjectName(text)}
+                    style={Styles.input} />
             </View>
-            <View>
-                <TouchableOpacity onPress={showDate} >
-                    <Text>Data do Registro</Text>
+            <View style={Styles.viewRegisterDate}>
+                <TouchableOpacity onPress={showDate} style={Styles.buttonRegisterDate}>
+                    <Text style={Styles.registerDate}>Data do Registro</Text>
                 </TouchableOpacity>
-                <DateTimePicker isVisible={startDate} mode="date"
+                <DateTimePicker isVisible={registerDate} mode="date"
                     onConfirm={confirmDate} onCancel={hideDate} />
             </View>
-            <View>
-                <Text>Importância do Requisito (de 1 a 5)</Text>
-                <TextInput onChangeText={text => setProjectName(text)}
-                    style={{ backgroundColor: "orange", color: "white" }} />
-                <Text>Nível de Dificuldade da Implementação do Requisito (de 1 a 5)</Text>
-                <TextInput onChangeText={text => setProjectName(text)}
-                    style={{ backgroundColor: "orange", color: "white" }} />
-                <Text>Tempo estimado da contrução e Entrega do Requisito (em horas)</Text>
-                <TextInput onChangeText={text => setProjectName(text)}
-                    style={{ backgroundColor: "orange", color: "white" }} />
+            <View style={Styles.viewSend}>
+                <TouchableOpacity style={Styles.buttonSend}>
+                    <Text style={Styles.send}>Finalizar</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );
 };
+
+const Styles = StyleSheet.create({
+    mainView: {
+        flex: 1,
+        backgroundColor: "#ffffff"
+    },
+    viewCaption: {
+        alignItems: "center",
+        marginTop: 50,
+        marginBottom: 70,
+    },
+    caption: {
+        fontSize: 22,
+        fontWeight: "bold",
+        color: "#000000",
+    },
+    viewName: {
+        marginBottom: 6,
+    },
+    name: {
+        fontSize: 14,
+        color: "#000000",
+        alignSelf: "center",
+        marginBottom: 10,
+        marginTop: 10,
+    },
+    input: {
+        backgroundColor: "#ff3300",
+        borderRadius: 5,
+        fontSize: 18,
+        color: "#ffffff",
+        paddingLeft: 10,
+        marginLeft: 10,
+        marginRight: 10,
+    },
+    viewRegisterDate: {
+        alignItems: "center",
+        marginTop: 20,
+    },
+    buttonRegisterDate: {
+        backgroundColor: "#ff3300",
+        width: 370,
+        height: 45,
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: 5,
+    },
+    registerDate: {
+        fontSize: 18,
+        fontWeight: "bold",
+        color: "#ffffff",
+    },
+    viewSend: {
+        marginTop: 70,
+        alignItems: "center",
+    },
+    buttonSend: {
+        backgroundColor: "#000000",
+        width: 110,
+        height: 40,
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: 20,
+    },
+    send: {
+        fontSize: 22,
+        fontWeight: "bold",
+        color: "#ffffff",
+    }
+});
