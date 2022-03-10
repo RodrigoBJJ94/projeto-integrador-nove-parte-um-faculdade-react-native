@@ -3,7 +3,7 @@ import { View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import Projetos from "./screens/Projetos/Projetos/Projetos";
-import Requisitos from "./screens/Requisitos/Requisitos";
+import Requisitos from "./screens/Requisitos/Requisitos/Requisitos";
 import { navigationStyle } from "./NavigationStyles";
 import Styles from "./Styles";
 
