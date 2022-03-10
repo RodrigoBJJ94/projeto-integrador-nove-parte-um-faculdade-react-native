@@ -3,7 +3,10 @@ import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet } from "reac
 import DateTimePicker from "react-native-modal-datetime-picker";
 
 export default function Requisitos() {
-    const [projectName, setProjectName] = useState("");
+    const [description, setDescription] = useState("");
+    const [inportance, setInportance] = useState("");
+    const [difficulty, setDifficulty] = useState("");
+    const [endTime, setEndTime] = useState("");
     const [registerDate, setRegisterDate] = useState(false);
 
     function showDate() {
@@ -15,7 +18,15 @@ export default function Requisitos() {
     };
 
     function confirmDate() {
-        showDate();
+        setRegisterDate(false);
+    };
+
+    function sendData() {
+        if (description !== "" && inportance !== "" && difficulty !== "" && endTime !== "") {
+            Alert.alert("Os requisitos foram salvos!");
+        } else {
+            Alert.alert("Favor preencha todos os dados!");
+        };
     };
 
     return (
@@ -25,16 +36,16 @@ export default function Requisitos() {
             </View>
             <View style={Styles.viewName}>
                 <Text style={Styles.name}>Descrição do Requisito</Text>
-                <TextInput onChangeText={text => setProjectName(text)}
+                <TextInput onChangeText={text => setDescription(text)}
                     style={Styles.input} />
                 <Text style={Styles.name}>Importância do Requisito (1 a 5)</Text>
-                <TextInput onChangeText={text => setProjectName(text)}
+                <TextInput onChangeText={text => setInportance(text)}
                     style={Styles.input} />
                 <Text style={Styles.name}>Nível de Dificuldade da Implementação do Requisito (1 a 5)</Text>
-                <TextInput onChangeText={text => setProjectName(text)}
+                <TextInput onChangeText={text => setDifficulty(text)}
                     style={Styles.input} />
                 <Text style={Styles.name}>Tempo estimado da Contrução/Entrega do Requisito (horas)</Text>
-                <TextInput onChangeText={text => setProjectName(text)}
+                <TextInput onChangeText={text => setEndTime(text)}
                     style={Styles.input} />
             </View>
             <View style={Styles.viewRegisterDate}>
@@ -45,7 +56,7 @@ export default function Requisitos() {
                     onConfirm={confirmDate} onCancel={hideDate} />
             </View>
             <View style={Styles.viewSend}>
-                <TouchableOpacity style={Styles.buttonSend}>
+                <TouchableOpacity onPress={sendData} style={Styles.buttonSend}>
                     <Text style={Styles.send}>Finalizar</Text>
                 </TouchableOpacity>
             </View>
@@ -65,7 +76,6 @@ const Styles = StyleSheet.create({
     },
     caption: {
         fontSize: 22,
-        fontWeight: "bold",
         color: "#000000",
     },
     viewName: {
