@@ -1,10 +1,7 @@
-export const navigationStyle = {
-    tabBarPressColor: "#ff3300",
-    tabBarLabelStyle: {
-        fontSize: 16,
-        fontWeight: "bold"
-    },
-    tabBarIndicatorStyle: {
-        backgroundColor: "#ff3300"
+import { StyleSheet } from "react-native";
+
+export default StyleSheet.create({
+    app: {
+        flex: 1
     }
-};
+});
