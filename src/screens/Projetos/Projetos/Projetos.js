@@ -8,8 +8,8 @@ import EndDate from "../EndDate/EndDate";
 import SendData from "../SendData/SendData";
 import Styles from "./Styles";
 
-export default function Projetos() {
-    const [projectName, setProjectName] = useState("");
+export default function Projetos({ navigation }) {
+    const [projectName, setProjectName] = useState(null);
 
     return (
         <View style={Styles.mainView}>
@@ -18,7 +18,7 @@ export default function Projetos() {
             <Input setProjectName={setProjectName} />
             <StartDate />
             <EndDate />
-            <SendData projectName={projectName} />
+            <SendData projectName={projectName} setProjectName={setProjectName} />
         </View>
     );
 };
