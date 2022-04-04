@@ -22,7 +22,10 @@ export default function Requisitos() {
                 <RegisterDate />
                 <SendData description={description} inportance={inportance}
                     difficulty={difficulty} endTime={endTime} />
-                <DadosRequisitos description={description} inportance={inportance} difficulty={difficulty} endTime={endTime} setDescription={setDescription} setInportance={setInportance} setDifficulty={setDifficulty} setEndTime={setEndTime} />
+                <DadosRequisitos description={description} inportance={inportance}
+                    difficulty={difficulty} endTime={endTime}
+                    setDescription={setDescription} setInportance={setInportance}
+                    setDifficulty={setDifficulty} setEndTime={setEndTime} />
             </ScrollView>
         </View>
     );
