@@ -18,7 +18,7 @@ export default function Inputs({ setDescription, setInportance, setDifficulty, s
             <TextInput onChangeText={text => setDifficulty(text)}
                 style={Styles.input} />
             <Text style={Styles.name}>
-                Tempo estimado da Contrução/Entrega do Requisito (horas)</Text>
+                Tempo Estimado da Construção/Entrega do Requisito (horas)</Text>
             <TextInput onChangeText={text => setEndTime(text)}
                 style={Styles.input} />
         </View>

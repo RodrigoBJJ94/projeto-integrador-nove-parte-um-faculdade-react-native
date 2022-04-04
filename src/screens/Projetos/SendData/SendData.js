@@ -1,9 +1,8 @@
 import React from "react";
 import { View, TouchableOpacity, Text, Alert } from "react-native";
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import Styles from "./Styles";
 
-export default function SendData({ projectName, setProjectName }) {
+export default function SendData({ projectName }) {
     function sendData() {
         if (projectName === "") {
             Alert.alert("Favor preencha os dados do projeto!");
@@ -12,15 +11,9 @@ export default function SendData({ projectName, setProjectName }) {
         };
     };
 
-    const storeData = (key, value) => {
-        AsyncStorage.setItem(key, value)
-    }
-
-    
-
     return (
         <View style={Styles.viewSend}>
-            <TouchableOpacity onPress={storeData} style={Styles.buttonSend}>
+            <TouchableOpacity onPress={sendData} style={Styles.buttonSend}>
                 <Text style={Styles.send}>Finalizar</Text>
             </TouchableOpacity>
         </View>

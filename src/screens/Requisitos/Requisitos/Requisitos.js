@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { View } from "react-native";
+import { View, ScrollView } from "react-native";
 import Caption from "../Caption/Caption";
 import Inputs from "../Inputs/Inputs";
 import RegisterDate from "../RegisterDate/RegisterDate";
 import SendData from "../SendData/SendData";
+import DadosRequisitos from "../DadosRequisitos/DadosRequisitos";
 import Styles from "./Styles";
 
 export default function Requisitos() {
@@ -14,12 +15,15 @@ export default function Requisitos() {
 
     return (
         <View style={Styles.mainView}>
-            <Caption />
-            <Inputs setDescription={setDescription} setInportance={setInportance}
-                setDifficulty={setDifficulty} setEndTime={setEndTime} />
-            <RegisterDate />
-            <SendData description={description} inportance={inportance}
-                difficulty={difficulty} endTime={endTime} />
+            <ScrollView>
+                <Caption />
+                <Inputs setDescription={setDescription} setInportance={setInportance}
+                    setDifficulty={setDifficulty} setEndTime={setEndTime} />
+                <RegisterDate />
+                <SendData description={description} inportance={inportance}
+                    difficulty={difficulty} endTime={endTime} />
+                <DadosRequisitos description={description} inportance={inportance} difficulty={difficulty} endTime={endTime} setDescription={setDescription} setInportance={setInportance} setDifficulty={setDifficulty} setEndTime={setEndTime} />
+            </ScrollView>
         </View>
     );
 };
