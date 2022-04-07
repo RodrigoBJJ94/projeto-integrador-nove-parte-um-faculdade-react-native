@@ -2,13 +2,15 @@ import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import Styles from "./Styles";
 
-export default function DadosRequisitos({ description, inportance, difficulty, endTime, setDescription, setInportance, setDifficulty, setEndTime }) {
+export default function DadosRequisitos({ description, inportance, difficulty, endTime, setDescription, setInportance, setDifficulty, setEndTime, latitude, longitude, setLatitude, setLongitude }) {
 
     function deleteData() {
         setDescription("");
         setInportance("");
         setDifficulty("");
         setEndTime("");
+        setLatitude("");
+        setLongitude("");
     };
 
     return (
@@ -19,9 +21,11 @@ export default function DadosRequisitos({ description, inportance, difficulty, e
             <Text style={Styles.nameText}>
                 Nível de Dificuldade da Implementação do Requisito: {difficulty}
             </Text>
-            <Text style={Styles.lastNameText}>
+            <Text style={Styles.nameText}>
                 Tempo Estimado da Construção/Entrega do Requisito: {endTime}
             </Text>
+            <Text style={Styles.nameText}>Latitude: {latitude}</Text>
+            <Text style={Styles.nameText}>Longitude: {longitude}</Text>
             <View style={Styles.viewButton}>
                 <TouchableOpacity onPress={() => deleteData()} style={Styles.button}>
                     <Text style={Styles.textButton}>Excluir Requisitos</Text>

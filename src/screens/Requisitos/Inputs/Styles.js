@@ -5,7 +5,7 @@ export default StyleSheet.create({
         marginBottom: 6,
     },
     name: {
-        fontSize: 14,
+        fontSize: 13,
         color: "#000000",
         alignSelf: "center",
         marginBottom: 10,

@@ -11,16 +11,11 @@ export default StyleSheet.create({
         marginBottom: 40,
     },
     nameText: {
-        fontSize: 20,
+        fontSize: 19,
         color: "#000000",
         marginLeft: 20,
+        marginRight: 20,
         marginBottom: 50,
-    },
-    lastNameText: {
-        fontSize: 20,
-        color: "#000000",
-        marginLeft: 20,
-        marginBottom: 170,
     },
     viewButton: {
         alignItems: "center",

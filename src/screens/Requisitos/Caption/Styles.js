@@ -4,7 +4,7 @@ export default StyleSheet.create({
     viewCaption: {
         alignItems: "center",
         marginTop: 50,
-        marginBottom: 70,
+        marginBottom: 40,
     },
     caption: {
         fontSize: 22,

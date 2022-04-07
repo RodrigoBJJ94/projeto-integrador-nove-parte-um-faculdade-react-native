@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     viewSend: {
-        marginTop: 70,
+        marginTop: 30,
         alignItems: "center",
     },
     buttonSend: {
