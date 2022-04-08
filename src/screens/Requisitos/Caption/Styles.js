@@ -3,8 +3,8 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     viewCaption: {
         alignItems: "center",
-        marginTop: 5,
-        marginBottom: 5,
+        marginTop: 20,
+        marginBottom: 10,
     },
     caption: {
         fontSize: 22,

@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     mainView: {
-        marginTop: 150,
+        marginTop: 155,
     },
     mainText: {
         fontSize: 30,

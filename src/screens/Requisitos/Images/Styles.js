@@ -8,7 +8,7 @@ export default StyleSheet.create({
         borderRadius: 5,
         paddingTop: 10,
         paddingBottom: 10,
-        marginTop: 3,
+        marginTop: 8,
     },
     buttonText: {
         color: "#ffffff",
@@ -22,7 +22,7 @@ export default StyleSheet.create({
         marginTop: 6,
     },
     image: {
-        width: 100,
-        height: 150
+        width: 106,
+        height: 154
     }
 });

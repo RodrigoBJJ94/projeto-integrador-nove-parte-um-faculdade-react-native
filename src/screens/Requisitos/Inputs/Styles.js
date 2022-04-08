@@ -8,8 +8,8 @@ export default StyleSheet.create({
         fontSize: 13,
         color: "#000000",
         alignSelf: "center",
-        marginBottom: 3,
-        marginTop: 3,
+        marginBottom: 5,
+        marginTop: 5,
     },
     input: {
         backgroundColor: "#ff3300",
