@@ -5,7 +5,7 @@ import Styles from "./Styles";
 export default function SendData({ description, inportance, difficulty, endTime }) {
     function sendData() {
         if (description !== "" && inportance !== "" && difficulty !== "" && endTime !== "") {
-            Alert.alert("Os requisitos foram salvos!");
+            Alert.alert("Os requisitos e as posições foram salvas!");
         } else {
             Alert.alert("Favor preencha todos os dados!");
         };

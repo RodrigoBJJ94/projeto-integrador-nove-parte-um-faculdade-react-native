@@ -24,11 +24,11 @@ export default function DadosRequisitos({ description, inportance, difficulty, e
             <Text style={Styles.nameText}>
                 Tempo Estimado da Construção/Entrega do Requisito: {endTime}
             </Text>
-            <Text style={Styles.nameText}>Latitude: {latitude}</Text>
+            <Text numberOfLines={1} style={Styles.nameTextLat}>Latitude: {latitude}</Text>
             <Text style={Styles.nameText}>Longitude: {longitude}</Text>
             <View style={Styles.viewButton}>
                 <TouchableOpacity onPress={() => deleteData()} style={Styles.button}>
-                    <Text style={Styles.textButton}>Excluir Requisitos</Text>
+                    <Text style={Styles.textButton}>Excluir Requisitos e posições</Text>
                 </TouchableOpacity>
             </View>
         </View>

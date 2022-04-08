@@ -2,14 +2,14 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     viewName: {
-        marginBottom: 6,
+        marginBottom: 5,
     },
     name: {
         fontSize: 13,
         color: "#000000",
         alignSelf: "center",
-        marginBottom: 10,
-        marginTop: 10,
+        marginBottom: 3,
+        marginTop: 3,
     },
     input: {
         backgroundColor: "#ff3300",

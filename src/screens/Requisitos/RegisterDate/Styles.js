@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
     viewRegisterDate: {
         alignItems: "center",
-        marginTop: 10,
+        marginTop: 6,
     },
     buttonRegisterDate: {
         backgroundColor: "#ff3300",
