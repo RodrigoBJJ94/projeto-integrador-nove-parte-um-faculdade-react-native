@@ -7,7 +7,8 @@ export default StyleSheet.create({
         marginBottom: 100,
     },
     caption: {
-        fontSize: 22,
+        fontSize: 24,
         color: "#000000",
+        fontWeight: "bold"
     }
 });

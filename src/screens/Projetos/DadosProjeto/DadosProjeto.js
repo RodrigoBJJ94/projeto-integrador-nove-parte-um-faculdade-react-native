@@ -1,8 +1,9 @@
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
+//import { WebView } from "react-native-webview";
 import Styles from "./Styles";
 
-export default function DadosProjeto({ projectName, setProjectName }) {
+export default function DadosProjeto({ projectName, setProjectName, lick }) {
     function deleteData() {
         setProjectName("");
     };
@@ -11,6 +12,7 @@ export default function DadosProjeto({ projectName, setProjectName }) {
         <View style={Styles.mainView}>
             <Text style={Styles.mainText}>Projetos Salvos</Text>
             <Text style={Styles.nameText}>Nome do Projeto: {projectName}</Text>
+            
             <View style={Styles.viewButton}>
                 <TouchableOpacity onPress={() => deleteData()} style={Styles.button}>
                     <Text style={Styles.textButton}>Excluir Projeto</Text>
@@ -19,3 +21,5 @@ export default function DadosProjeto({ projectName, setProjectName }) {
         </View>
     );
 };
+
+//<WebView source={{ uri: "https://reactnative.dev/" }} style={{width: "50%"}} />

@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     mainView: {
-        marginTop: 100,
+        marginTop: 135,
     },
     mainText: {
         fontSize: 30,
@@ -14,7 +14,7 @@ export default StyleSheet.create({
         fontSize: 20,
         color: "#000000",
         marginLeft: 20,
-        marginBottom: 450,
+        marginBottom: 30,
     },
     viewButton: {
         alignItems: "center",

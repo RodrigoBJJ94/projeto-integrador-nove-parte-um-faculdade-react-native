@@ -1,12 +1,19 @@
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
-    app: {
-        flex: 1
+    button: {
+        backgroundColor: "#00ff7f",
+        width: 170,
+        height: 50,
+        marginLeft: 10,
+        marginTop: 40,
+        justifyContent: "center",
+        borderRadius: 4,
     },
-    tab: {
-        tabBarStyle: {
-            height: 0
-        }
+    textButton: {
+        color: "#000000",
+        fontSize: 18,
+        fontWeight: "500",
+        textAlign: "center"
     }
 });

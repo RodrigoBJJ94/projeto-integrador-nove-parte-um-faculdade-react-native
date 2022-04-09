@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Alert } from "react-native";
+import Styles from "./Styles";
 
 export default function LoginUser({ name, password, navigation }) {
     function userLogin() {
@@ -13,8 +14,8 @@ export default function LoginUser({ name, password, navigation }) {
 
     return (
         <View>
-            <TouchableOpacity onPress={userLogin}>
-                <Text>Entrar</Text>
+            <TouchableOpacity style={Styles.button} onPress={userLogin}>
+                <Text style={Styles.textButton}>Entrar</Text>
             </TouchableOpacity>
         </View>
     );

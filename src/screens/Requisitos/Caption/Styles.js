@@ -8,6 +8,7 @@ export default StyleSheet.create({
     },
     caption: {
         fontSize: 22,
+        fontWeight: "bold",
         color: "#000000",
     }
 });

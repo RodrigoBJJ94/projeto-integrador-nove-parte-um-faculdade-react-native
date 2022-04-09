@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Alert } from "react-native";
+import Styles from "./Styles";
 
 export default function RegisterUser({ name, password }) {
     function userRegister() {
@@ -12,8 +13,8 @@ export default function RegisterUser({ name, password }) {
 
     return (
         <View>
-            <TouchableOpacity onPress={userRegister}>
-                <Text>Cadastrar Usuário</Text>
+            <TouchableOpacity style={Styles.button} onPress={userRegister}>
+                <Text style={Styles.textButton}>Cadastrar Usuário</Text>
             </TouchableOpacity>
         </View>
     );

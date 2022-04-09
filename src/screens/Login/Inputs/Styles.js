@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
     viewInputs: {
-        marginTop: 80,
+        marginTop: 100,
     },
     texts: {
         color: "#000000",
